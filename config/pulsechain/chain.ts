@@ -1,25 +1,24 @@
 import { Address, BigDecimal, BigInt } from '@graphprotocol/graph-ts/index'
 
-export const FACTORY_ADDRESS = '0x527Af259D3D910CD86A022f922B74270FBE4D40F'
+export const FACTORY_ADDRESS = '0x527af259d3d910cd86a022f922b74270fbe4d40f';
 
-export const REFERENCE_TOKEN = '0xA1077a294dDE1B09bB078844df40758a5D0f9a27'
-export const STABLE_TOKEN_PAIRS = ['0xBAb54D99dA875fb9016f9E847eD75c099f447a9f']
+export const REFERENCE_TOKEN = '0xa1077a294dde1b09bb078844df40758a5d0f9a27'; // WPLS
+export const STABLE_TOKEN_PAIRS = [
+  '0xbab54d99da875fb9016f9e847ed75c099f447a9f' // WPLS/DAI pair
+];
 
-// token where amounts should contribute to tracked volume and liquidity
 export const WHITELIST: string[] = [
-  '0xA1077a294dDE1B09bB078844df40758a5D0f9a27', // PLS
-  '0xefD766cCb38EaF1dfd701853BFCe31359239F305', // DAI
-]
+  '0xa1077a294dde1b09bb078844df40758a5d0f9a27', // WPLS
+  '0xefd766ccb38eaf1dfd701853bfce31359239f305', // DAI
+];
 
 export const STABLECOINS = [
-  '0xefD766cCb38EaF1dfd701853BFCe31359239F305', // DAI
-]
+  '0xefd766ccb38eaf1dfd701853bfce31359239f305', // DAI
+];
 
-// minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('1')
-
-// minimum liquidity for price to get tracked
-export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('1')
+// thresholds (see notes below)
+export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('1');
+export const MINIMUM_LIQUIDITY_THRESHOLD_ETH  = BigDecimal.fromString('0.01');
 
 export class TokenDefinition {
   address: Address
