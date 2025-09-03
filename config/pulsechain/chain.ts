@@ -16,7 +16,7 @@ export const STABLECOINS = [
 ]
 
 // minimum liquidity required to count towards tracked volume for pairs with small # of Lps
-export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('10000')
+export const MINIMUM_USD_THRESHOLD_NEW_PAIRS = BigDecimal.fromString('1')
 
 // minimum liquidity for price to get tracked
 export const MINIMUM_LIQUIDITY_THRESHOLD_ETH = BigDecimal.fromString('1')
